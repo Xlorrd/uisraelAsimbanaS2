@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="asimbanaS2.Vistas.calificaciones"
              Title="calificaciones">
-    <StackLayout Spacing="1" Padding="20" >
+    <StackLayout Spacing="1" Padding="5" >
 
         <Image
              Source="logo.png"
@@ -14,124 +14,102 @@
 
         <Label
                 Text="Sistema de calificaciones"
-                SemanticProperties.HeadingLevel="Level1"
+               
                 FontSize="Title"
                 TextColor="Red"
                 HorizontalOptions="CenterAndExpand" />
-        
         <StackLayout Orientation="Horizontal" Padding="20">
-            <!--<Label
-                Text="Notas"
-                FontAttributes="Bold" 
-                FontSize="25"
-                HorizontalOptions="FillAndExpand" />-->
+        <Picker x:Name="pkEstudiantes" HorizontalOptions="StartAndExpand" FontSize="Subtitle" FontAttributes="Italic" Title="Selecciona el estudiante"  HorizontalTextAlignment="Start" >
+            <Picker.Items>
+                <x:String>Alex Simbaña</x:String>
+                <x:String>Dario Guaman</x:String>
+                <x:String>Luis Cali</x:String>                
+                </Picker.Items>
+        </Picker>
+            <DatePicker x:Name="dpFecha"  Format="mm/dd/yyyy" FontSize="Subtitle" HorizontalOptions="StartAndExpand" />
+          
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Padding="20">
+           
             <Label
                 Text="Parcial 1"
                 FontAttributes="Bold" 
                 FontSize="Title"
-                HorizontalOptions="FillAndExpand" />
+                HorizontalOptions="CenterAndExpand" />
             <Label
                  Text="Parcial 2"
                  FontAttributes="Bold"                 
                  FontSize="Title"
-                 HorizontalOptions="FillAndExpand" />
+                 HorizontalOptions="CenterAndExpand" />
+           
 
         </StackLayout>
 
         <StackLayout Orientation="Horizontal" Padding="20">
-            <!--<Label
-                Text="Seguimiento"                 
+            <Entry x:Name="txtnotaP1" Placeholder="Nota Seg p1" FontSize="20" Keyboard="Numeric" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" TextChanged="txtnotaP1_TextChanged"></Entry>            
+            <Entry x:Name="txtnotaP2" Placeholder="Nota Seg p2" FontSize="20" Keyboard="Numeric" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" TextChanged="txtnotaP2_TextChanged"></Entry>           
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"  Padding="20">         
+            <Entry x:Name="txtnotaExamen" Placeholder="Exámen p1" FontSize="20" Keyboard="Numeric" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextChanged="txtnotaExamen_TextChanged"></Entry>
+            <Entry x:Name="txtnotaExamen2" Placeholder="Exámen p2" FontSize="20" Keyboard="Numeric" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextChanged="txtnotaExamen2_TextChanged"></Entry>
+        </StackLayout>
+       
+        <!--<StackLayout Orientation="Horizontal" >
+            <Label Padding="10"
+                Text="Total"
+                FontAttributes="Bold" 
+                FontSize="20"
+                HorizontalOptions="CenterAndExpand" />
+            
+            <Border Padding="10">
+                <Label
+                x:Name="lblTotalP1"
+                Text="1"                 
+                FontSize="20"
+                Margin="25,0,25,0"
+                
+                HorizontalOptions="CenterAndExpand" />
+            </Border>
+            <Label Padding="10"
+                
+                Text="+"                 
                 FontSize="18"
-                FontAttributes="Italic" 
-                HorizontalOptions="FillAndExpand" />-->
-            <Entry x:Name="txtnotaP1" Placeholder="   Nota Seg p1   " FontSize="20" Keyboard="Numeric" HorizontalOptions="StartAndExpand"  HorizontalTextAlignment="Center"></Entry>
-            <Entry x:Name="txtnotaP2" Placeholder="   Nota Seg p2   " FontSize="20" Keyboard="Numeric" HorizontalOptions="StartAndExpand"  HorizontalTextAlignment="Center"></Entry>
+                 />
+            <Border Padding="10">
+                <Label
+                x:Name="lblTotalP2"
+                Text="2"                 
+                FontSize="18"
+                Margin="25,0,25,0"
+                HorizontalOptions="EndAndExpand" />
+            </Border>
+            <Label Padding="10"                
+                Text="="                 
+                FontSize="18"
+                 />
+            <Border Padding="10">
+                <Label
+                x:Name="lblTotalFinal"
+                Text="2"                 
+                FontSize="18"
+                Margin="25,0,25,0"
+                HorizontalOptions="CenterAndExpand" />
+            </Border>
 
-        </StackLayout>
-        <StackLayout Orientation="Horizontal" Padding="20">
-            <!--<Label
-                Text="Exámen"                 
-                FontSize="18"
-                 FontAttributes="Italic" 
-                HorizontalOptions="FillAndExpand"  />-->
-            <Entry x:Name="txtnotaExamen" Placeholder="   Exámen p1   " FontSize="20" Keyboard="Numeric" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Center"></Entry>
-            <Entry x:Name="txtnotaExamen2" Placeholder="   Exámen p2   " FontSize="20" Keyboard="Numeric" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Center"></Entry>
-        </StackLayout>
+        </StackLayout>-->
         <Button
                      x:Name="btnCalcular"
-                     Text="Calcular"
+                     Text="     CALCULAR     "
                      SemanticProperties.Hint="Counts the number of times you click"
                      Clicked="btnCalcular_Clicked"
-                     HorizontalOptions="Center" />
-    </StackLayout>
-   
-        <!--<VerticalStackLayout
-     Spacing="30"
-     Padding="30,0"
-     VerticalOptions="Start">
-            <Image
-             Source="logo.png"
-             SemanticProperties.Description="Cute dot net bot waving hi to you!"
-             HeightRequest="75"
-             HorizontalOptions="Center" />
+                     
+                     HorizontalOptions="CenterAndExpand" />
 
-            
-            <Label
-                Text="Sistema de calificaciones"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="25"
-                TextColor="Red"
-                HorizontalOptions="CenterAndExpand" />
-            <Label
-                Text="Parcial 1"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="25"
-                HorizontalOptions="CenterAndExpand" />
-            <Picker x:Name="pkEstudiantes">
-                <Picker.Items>
-                    <x:String>Alex Simbaña
-                    </x:String>
-                    <x:String>Dario Guaman</x:String>
-                    <x:String>Luis Cali</x:String>
-                </Picker.Items>
-            </Picker>
-           
-             
-            </Entry>
-            <Entry x:Name="txtnotaExamen" Placeholder="Ingrese Nota Examen" Keyboard="Numeric">
-
-            </Entry>
-            
-            <Label
-                 Text="Parcial 2"
-                 SemanticProperties.HeadingLevel="Level1"
-                 FontSize="25"
-                 HorizontalOptions="CenterAndExpand" />
-            
-
-            
-            <DatePicker x:Name="dpFecha"  Format="mm/dd/yyyy"
-           />
-            <Entry x:Name="txtnotaP2" Placeholder="Ingrese Nota 1" Keyboard="Numeric">
-
-            </Entry>
-            <Entry x:Name="txtnotaExamen2" Placeholder="Ingrese nota del exámen" Keyboard="Numeric"></Entry>
-            <Label
-                x:Name="lblSeleccion"
-                Text=""
-                SemanticProperties.HeadingLevel="Level2"    
+        <Label Padding="10" VerticalOptions="EndAndExpand"     HorizontalOptions="CenterAndExpand"           
+                Text="Realizado por Alex Simbaña"   
+               
                 FontSize="18"
-                HorizontalOptions="Start" />
-
-            <Button
-                     x:Name="btnCalcular"
-                     Text="Calcular"
-                     SemanticProperties.Hint="Counts the number of times you click"
-                     Clicked="btnCalcular_Clicked"
-                     HorizontalOptions="Center" />
-
-
-
-        </VerticalStackLayout>-->
-   
+                 />
+    </StackLayout>
+ 
 </ContentPage>
