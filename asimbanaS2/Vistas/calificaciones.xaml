@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="asimbanaS2.Vistas.calificaciones"
+             Title="calificaciones">
+    <StackLayout Spacing="1" Padding="20" >
+
+        <Image
+             Source="logo.png"
+             SemanticProperties.Description="Cute dot net bot waving hi to you!"
+             HeightRequest="75"
+             HorizontalOptions="Center" />
+
+
+        <Label
+                Text="Sistema de calificaciones"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="Title"
+                TextColor="Red"
+                HorizontalOptions="CenterAndExpand" />
+        
+        <StackLayout Orientation="Horizontal" Padding="20">
+            <!--<Label
+                Text="Notas"
+                FontAttributes="Bold" 
+                FontSize="25"
+                HorizontalOptions="FillAndExpand" />-->
+            <Label
+                Text="Parcial 1"
+                FontAttributes="Bold" 
+                FontSize="Title"
+                HorizontalOptions="FillAndExpand" />
+            <Label
+                 Text="Parcial 2"
+                 FontAttributes="Bold"                 
+                 FontSize="Title"
+                 HorizontalOptions="FillAndExpand" />
+
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Padding="20">
+            <!--<Label
+                Text="Seguimiento"                 
+                FontSize="18"
+                FontAttributes="Italic" 
+                HorizontalOptions="FillAndExpand" />-->
+            <Entry x:Name="txtnotaP1" Placeholder="   Nota Seg p1   " FontSize="20" Keyboard="Numeric" HorizontalOptions="StartAndExpand"  HorizontalTextAlignment="Center"></Entry>
+            <Entry x:Name="txtnotaP2" Placeholder="   Nota Seg p2   " FontSize="20" Keyboard="Numeric" HorizontalOptions="StartAndExpand"  HorizontalTextAlignment="Center"></Entry>
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Padding="20">
+            <!--<Label
+                Text="Exámen"                 
+                FontSize="18"
+                 FontAttributes="Italic" 
+                HorizontalOptions="FillAndExpand"  />-->
+            <Entry x:Name="txtnotaExamen" Placeholder="   Exámen p1   " FontSize="20" Keyboard="Numeric" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Center"></Entry>
+            <Entry x:Name="txtnotaExamen2" Placeholder="   Exámen p2   " FontSize="20" Keyboard="Numeric" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Center"></Entry>
+        </StackLayout>
+        <Button
+                     x:Name="btnCalcular"
+                     Text="Calcular"
+                     SemanticProperties.Hint="Counts the number of times you click"
+                     Clicked="btnCalcular_Clicked"
+                     HorizontalOptions="Center" />
+    </StackLayout>
+   
+        <!--<VerticalStackLayout
+     Spacing="30"
+     Padding="30,0"
+     VerticalOptions="Start">
+            <Image
+             Source="logo.png"
+             SemanticProperties.Description="Cute dot net bot waving hi to you!"
+             HeightRequest="75"
+             HorizontalOptions="Center" />
+
+            
+            <Label
+                Text="Sistema de calificaciones"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="25"
+                TextColor="Red"
+                HorizontalOptions="CenterAndExpand" />
+            <Label
+                Text="Parcial 1"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="25"
+                HorizontalOptions="CenterAndExpand" />
+            <Picker x:Name="pkEstudiantes">
+                <Picker.Items>
+                    <x:String>Alex Simbaña
+                    </x:String>
+                    <x:String>Dario Guaman</x:String>
+                    <x:String>Luis Cali</x:String>
+                </Picker.Items>
+            </Picker>
+           
+             
+            </Entry>
+            <Entry x:Name="txtnotaExamen" Placeholder="Ingrese Nota Examen" Keyboard="Numeric">
+
+            </Entry>
+            
+            <Label
+                 Text="Parcial 2"
+                 SemanticProperties.HeadingLevel="Level1"
+                 FontSize="25"
+                 HorizontalOptions="CenterAndExpand" />
+            
+
+            
+            <DatePicker x:Name="dpFecha"  Format="mm/dd/yyyy"
+           />
+            <Entry x:Name="txtnotaP2" Placeholder="Ingrese Nota 1" Keyboard="Numeric">
+
+            </Entry>
+            <Entry x:Name="txtnotaExamen2" Placeholder="Ingrese nota del exámen" Keyboard="Numeric"></Entry>
+            <Label
+                x:Name="lblSeleccion"
+                Text=""
+                SemanticProperties.HeadingLevel="Level2"    
+                FontSize="18"
+                HorizontalOptions="Start" />
+
+            <Button
+                     x:Name="btnCalcular"
+                     Text="Calcular"
+                     SemanticProperties.Hint="Counts the number of times you click"
+                     Clicked="btnCalcular_Clicked"
+                     HorizontalOptions="Center" />
+
+
+
+        </VerticalStackLayout>-->
+   
+</ContentPage>

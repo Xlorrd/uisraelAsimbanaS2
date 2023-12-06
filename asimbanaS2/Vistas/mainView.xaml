@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="asimbanaS2.Vistas.mainView"
+             Title="mainView">
+    <ScrollView>
+        <VerticalStackLayout
+        Spacing="30"
+        Padding="30,0"
+        VerticalOptions="Start">
+            <Image
+                Source="logo.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="75"
+                HorizontalOptions="Center" />
+
+            <Label
+            Text="Semana dos: Elementos visuales"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="25"
+            HorizontalOptions="CenterAndExpand" />
+
+            <Border Stroke="Blue">
+                <Picker x:Name="pkPaises">
+                 <Picker.Items>
+                    <x:String>Ecuador
+                    </x:String>
+                    <x:String>Colombia</x:String>
+                    <x:String>Pueru</x:String>
+                  </Picker.Items>
+                </Picker>
+            </Border>
+            
+            <Label
+                x:Name="lblSeleccion"
+                Text=""
+                SemanticProperties.HeadingLevel="Level2"    
+                FontSize="18"
+                HorizontalOptions="Start" />
+            <DatePicker x:Name="dpFecha"  Format="mm/dd/yyyy"
+     
+    
+              />
+            
+            <Button
+              x:Name="btnMostrar"
+              Text="Mostrar"
+              SemanticProperties.Hint="Counts the number of times you click"
+              Clicked="btnMostrar_Clicked"
+              HorizontalOptions="Center" />
+            
+            <Button
+                 x:Name="btnFecha"
+                 Text="Mostrar"
+                 SemanticProperties.Hint="Counts the number of times you click"
+                 Clicked="btnFecha_Clicked"
+                 HorizontalOptions="Center" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
