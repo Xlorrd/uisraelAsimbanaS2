@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new Vistas.calificaciones();
+            MainPage = new NavigationPage(new Vistas.vistaLogin());
         }
     }
 }

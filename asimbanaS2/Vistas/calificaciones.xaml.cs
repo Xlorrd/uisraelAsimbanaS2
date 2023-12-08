@@ -4,9 +4,10 @@ namespace asimbanaS2.Vistas;
 
 public partial class calificaciones : ContentPage
 {
-	public calificaciones()
+	public calificaciones(string usuario)
 	{
 		InitializeComponent();
+        lblUsuario.Text = $"Bienvenido {usuario}";
 	}
 
     private void btnCalcular_Clicked(object sender, EventArgs e)
