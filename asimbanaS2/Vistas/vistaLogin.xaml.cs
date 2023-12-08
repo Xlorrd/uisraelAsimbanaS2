@@ -13,6 +13,7 @@ public partial class vistaLogin : ContentPage
     {
 		string usuario = "alex";
 		string contrasena = "qwerty";
+		string pass = "pas";
 
 		if (txtUsuario.Text==usuario && txtContrasena.Text==contrasena)
 		{
