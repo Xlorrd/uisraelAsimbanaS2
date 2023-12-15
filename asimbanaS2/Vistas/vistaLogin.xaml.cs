@@ -34,6 +34,9 @@ public partial class vistaLogin : ContentPage
         string[,] usuarios = new string[,]
         {
             {"asimbana","contraseña" },
+            {"Carlos","carlos123"},
+            {"Ana","ana123" },
+            {"Jose","jose123" },
             {"ecustodio","qwerty" },
             {"smurillo","ruliman" },
             {"alice", "alicespass"},
