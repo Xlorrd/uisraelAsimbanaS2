@@ -36,20 +36,23 @@ public partial class calificaciones : ContentPage
 
             if (sumaTotal >= 7)
             {
-                DisplayAlert($"Hola {estudiante}      {fecha}", $"Tus calificaciones del son \n Parcial 1: {resultadop1}\n Parcial 2: {resultadop2} \n Aprobaste con {sumaTotal} ", "OK");
+                DisplayAlert($"Hola {estudiante} {fecha}", $"Tus calificaciones son \n Parcial 1: {resultadop1}\n Parcial 2: {resultadop2} \n Aprobado con Nota Final: {sumaTotal}", "OK");
             }
-            else
+            else if (sumaTotal >= 5 && sumaTotal <= 6.9)
             {
-                DisplayAlert($"Hola {estudiante}      {fecha}", $"Tus calificaciones del son \n Parcial 1: {resultadop1}\n Parcial 2: {resultadop2} \n Reprobaste con {sumaTotal} ", "OK");
-
-
+                DisplayAlert($"Hola {estudiante} {fecha}", $"Tus calificaciones son \n Parcial 1: {resultadop1}\n Parcial 2: {resultadop2} \n Complementario con Nota Final: {sumaTotal}", "OK");
+            }
+            else if (sumaTotal < 5)
+            {
+                DisplayAlert($"Hola {estudiante} {fecha}", $"Tus calificaciones son \n Parcial 1: {resultadop1}\n Parcial 2: {resultadop2} \n Reprobado con Nota Final: {sumaTotal}", "OK");
             }
         }
         else
         {
             DisplayAlert("Error", "Seleccione un estudiante", "Ok");
         }
-        
+
+
 
 
 
