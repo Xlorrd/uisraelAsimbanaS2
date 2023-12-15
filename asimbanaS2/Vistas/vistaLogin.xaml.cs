@@ -38,17 +38,8 @@ public partial class vistaLogin : ContentPage
             {"Ana","ana123" },
             {"Jose","jose123" },
             {"ecustodio","qwerty" },
-            {"smurillo","ruliman" },
-            {"alice", "alicespass"},
-            {"bob", "bobspass"},
-            {"charlie", "charliespass"},
-            {"diana", "dianaspass"},
-            {"edgar", "edgarspass"},
-            {"fiona", "fionaspass"},
-            {"george", "georgespass"},
-            {"helen", "helenspass"},
-            {"ian", "ianspass"},
-            {"julia", "juliaspass"}
+            {"smurillo","ruliman" }
+           
         };
         bool Autentification = false;
 
